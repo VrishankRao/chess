@@ -1,0 +1,19 @@
+[package]
+name = "mctscore"
+version = "0.1.0"
+edition = "2021"
+description = "V21 batch C core: pure-Rust MCTS tree mechanics on opaque eval vectors (no NN, no board, no RNG). V21.1 E1 adds an optional PyO3 control plane (Python owns boards/RNG/NN; eval vectors cross via the batch queue; NO NN in Rust)."
+
+[lib]
+name = "mctscore"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Same pinned toolchain as rust/chesscore (maturin, pyo3 =0.22.6,
+# extension-module). Optional so the core stays dependency-free:
+# `cargo build/test` use no features; the wheel enables `python`.
+pyo3 = { version = "=0.22.6", features = ["extension-module"], optional = true }
+
+[features]
+default = []
+python = ["pyo3"]

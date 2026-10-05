@@ -1,0 +1,40 @@
+{
+  "champion": {
+    "role": "champion",
+    "lineage": "v19",
+    "original_iteration": 27,
+    "architecture": {
+      "blocks": 6,
+      "channels": 64,
+      "input_planes": 30,
+      "se_ratio": 4
+    },
+    "export": "weights only; optimizer and replay intentionally excluded"
+  },
+  "assets": {
+    "weights/champion.pt": {
+      "bytes": 10791412,
+      "sha256": "bc0e4ba7f9eb83fa71c9c8b9296756c8b18ceadd88c55f72202382a541674314"
+    },
+    "checkpoints_warm/warmstart.pt": {
+      "bytes": 10791435,
+      "sha256": "cd469a54e5eee3a1788b0a69af461e774232ab69047e3e818d8967cc12df2b4c"
+    },
+    "data_sl/puzzles.jsonl": {
+      "bytes": 280527,
+      "sha256": "6ff1b817dc9adc664908d0a53770e25c1684e6d065c25ff7b893281d3094b801"
+    },
+    "data_sl/av_15k.jsonl": {
+      "bytes": 6878190,
+      "sha256": "6e07863e749b94d3df721c09fce4d10e5f26f374daa4d85a1a21cf1b1c143383"
+    },
+    "data_sl/games.jsonl": {
+      "bytes": 3192054,
+      "sha256": "fda9c6edb53dfcbc506a08aa04e685b91d618b0a74cad1f073fb529c1cd90ad9"
+    },
+    "data_sl/endgames.jsonl": {
+      "bytes": 46140,
+      "sha256": "2b99426b2b216f46e04b19d95f35abbb6cc312f013f3bd49cbd82f685a290a5d"
+    }
+  }
+}

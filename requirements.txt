@@ -1,0 +1,5 @@
+torch>=2.4,<3
+numpy>=1.26,<3
+chess>=1.11.2,<2
+psutil>=5.9
+PyYAML>=6

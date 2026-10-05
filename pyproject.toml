@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chess-zero"
+version = "0.1.0"
+description = "Chess self-play training and a neural MCTS UCI engine"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["torch>=2.4,<3", "numpy>=1.26,<3", "chess>=1.11.2,<2", "psutil>=5.9", "PyYAML>=6"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.8"]
+dev = ["pytest>=8", "maturin>=1,<2"]
+
+[tool.setuptools.packages.find]
+include = ["chess_zero*"]
+
+[tool.setuptools.package-data]
+chess_zero = ["*.json"]
